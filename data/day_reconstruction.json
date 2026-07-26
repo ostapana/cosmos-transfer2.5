@@ -1,0 +1,12 @@
+{
+  "name": "day_reconstruction",
+  "video_path": "/mnt/proj2/open-37-64/anastasia/projects/cosmos-transfer2.5/data/day_reconstruction_dummy_match_depth.mp4",
+"prompt": "A forward-facing dashcam video driving along a European street with historic buildings during daytime. The ego vehicle has a dark glossy black hood visible at the bottom of the frame. The red van appears on the right.The sky is clear and blue, suggesting fair weather with no visible clouds. Cars drive ahead in traffic and pedestrians wait or walk along the sidewalk near the crosswalk and tram stop. Traffic signs, street lamps, overhead tram wires, and historic buildings line the road. The street, buildings, vehicles, pedestrians, traffic lights, and road layout remain clearly consistent, and the overall atmosphere is calm yet active, typical of daytime city driving.",
+  "guidance": 4,
+  "sigma_max": "40.0",
+  "negative_prompt": "The video shows an unrealistic traffic scene with floating or jittery cars that ignore physics. Vehicles overlap unnaturally and don't align with the road. Road markings are inconsistent or missing. Lighting is flickering and fake, while backgrounds look melted or warped. Pedestrians and traffic signals are misshapen, duplicated, or misplaced. Overall, the scene feels chaotic, lacks depth, structure, and visual coherence.",
+  "seg": {
+  	"control_path": "/mnt/proj2/open-37-64/anastasia/projects/cosmos-transfer2.5/data/day_to_night_rainy_control_seg.mp4",
+  	"control_weight": 1.0
+  }
+}

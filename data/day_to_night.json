@@ -1,0 +1,23 @@
+{
+  "name": "day_to_night_rainy",
+  "video_path": "/mnt/proj2/open-37-64/anastasia/projects/cosmos-transfer2.5/data/day.mp4",
+  "prompt": "A forward-facing dashcam video driving along a European street with tram tracks and historic buildings during a dark night. The sky is dim and the scene is shrouded in deep darkness, with the main visible light coming from scattered headlights, traffic lights, dim streetlights, and a few illuminated windows. Cars drive ahead in traffic and pedestrians walk along the sidewalk near the road. Traffic signs, street lamps, and buildings line the road, while surrounding details are only faintly visible in the low light. The street, buildings, vehicles, pedestrians, and road layout remain clearly consistent, and the overall atmosphere is calm yet active, typical of nighttime city driving.",
+  "guidance": 4,
+  "sigma_max": "40.0",
+"seg": {
+  "control_path": "/mnt/proj2/open-37-64/anastasia/projects/cosmos-transfer2.5/data/day_to_night_rainy_control_seg.mp4",
+  "control_weight": 0.6
+},
+"depth": {
+  "control_path": "/mnt/proj2/open-37-64/anastasia/projects/cosmos-transfer2.5/data/day_to_night_rainy_control_depth.mp4",
+  "control_weight": 0.25
+},
+"edge": {
+  "control_path": "/mnt/proj2/open-37-64/anastasia/projects/cosmos-transfer2.5/data/day_to_night_rainy_control_edge.mp4",
+  "control_weight": 0.5
+},
+"vis": {
+  "control_weight": 0.005
+},
+"negative_prompt": "The video shows an unrealistic traffic scene with floating or jittery cars that ignore physics, sliding without friction, turning sharply without steering, or vanishing mid-motion. Vehicles overlap unnaturally, lack weight or inertia, and don't align with the road. Road markings are inconsistent or missing, and lanes appear distorted. Lighting is flickering and fake, while backgrounds look melted or warped. Pedestrians and traffic signals are misshapen, duplicated, or misplaced. Overall, the scene feels chaotic, lacks depth, structure, and visual coherence."
+}
