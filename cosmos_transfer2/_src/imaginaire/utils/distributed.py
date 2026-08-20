@@ -51,7 +51,10 @@ def init() -> int | None:
     local_rank = int(os.getenv("LOCAL_RANK", 0))
     try:
         device = Device(local_rank)
-        os.sched_setaffinity(0, device.get_cpu_affinity())
+        try:
+            os.sched_setaffinity(0, device.get_cpu_affinity())
+        except OSError:
+            log.warning(f"Failed to set CPU affinity: {e}")
     except pynvml.NVMLError as e:
         log.warning(f"Failed to set device affinity: {e}")
     # Set up NCCL communication.
@@ -77,6 +80,7 @@ def init() -> int | None:
     log.info(f"Training with {get_world_size()} GPUs.")
 
 
+    return local_rank
 def get_rank(group: Optional[dist.ProcessGroup] = None) -> int:
     """Get the rank (GPU device) of the worker.
 
